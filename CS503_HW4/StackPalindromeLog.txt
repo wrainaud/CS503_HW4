@@ -1,0 +1,2 @@
+Program started
+String is not palindrome

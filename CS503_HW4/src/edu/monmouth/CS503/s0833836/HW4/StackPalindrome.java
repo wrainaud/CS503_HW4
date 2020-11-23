@@ -36,6 +36,8 @@ public class StackPalindrome {
 		
 		logFileName = properties.getProperty(StackPalindromeConstants.LOG_FILE_PROPERTY_NAME);
 		
+		System.out.println(StackPalindromeConstants.LOG_FILE_PROPERTY_NAME);
+		
 		if (logFileName == null) {
 			System.err.println(StackPalindromeConstants.LOG_FILE_PROPERTY_NAME + " property not found");
 			System.exit(StackPalindromeConstants.NO_PROPERTY_EXIT);
@@ -59,7 +61,7 @@ public class StackPalindrome {
 			stack.push(character);
 		}//for
 		
-		StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder(StackPalindromeConstants.WORDCHECK.length());
 		
 		for (int j = 0; j < StackPalindromeConstants.WORDCHECK.length(); j++) {
 			char character = StackPalindromeConstants.WORDCHECK.charAt(j);
@@ -72,10 +74,6 @@ public class StackPalindrome {
 			System.out.println("String is not palindrome");
 		}//else
 		
-//		public String compareTo() {
-//			int compareValue = 0;
-//			if (this.stack )
-//		}//compareTo
 	}//main
 
 }//class
